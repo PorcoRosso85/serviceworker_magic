@@ -1,4 +1,5 @@
-import { Hono } from './hono.js'
+// import { Hono } from './hono.js'
+import { Hono } from 'hono'
 import { serveStatic } from './hono.serve-static.js'
 import { logger } from './hono.logger.js'
 
@@ -74,6 +75,7 @@ Hello! from ${from}!</pre>
 // Route
 app.get('/server/hello', handler)
 app.get('/sw/hello', handler)
+app.get('/sw/jsx',  handler)
 
 // addEventListener('fetch'...
 app.fire()
